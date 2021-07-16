@@ -21,7 +21,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CopiaBaseDadosServiceTest {
+public class CopiaBaseDadosLinhasServiceTest {
 
     @Mock
     BuscaLinhasService buscaLinhasService;
@@ -33,7 +33,7 @@ public class CopiaBaseDadosServiceTest {
     LinhasToLinhasOutConverter linhasToLinhasOutConverter;
 
     @InjectMocks
-    CopiaBaseDadosService service;
+    CopiaBaseDadosLinhasService service;
 
     private List<LinhaIn> linhasIn = new ArrayList<>();
 
