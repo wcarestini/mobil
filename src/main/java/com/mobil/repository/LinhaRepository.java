@@ -8,4 +8,6 @@ import java.util.List;
 public interface LinhaRepository extends JpaRepository<Linha, Long> {
 
     List<Linha> findByNome(final String nome);
+
+    boolean existsByCodigo(final String codigo);
 }
