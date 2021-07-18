@@ -11,7 +11,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class CopiaBaseDadosService {
+public class CopiaBaseDadosLinhasService {
 
     private final BuscaLinhasService buscaLinhasService;
     private final SalvaLinhasInService salvaLinhasInService;

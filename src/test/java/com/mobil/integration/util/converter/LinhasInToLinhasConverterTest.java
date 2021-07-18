@@ -8,9 +8,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.internal.bytebuddy.utility.RandomString;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -27,15 +29,9 @@ public class LinhasInToLinhasConverterTest {
 
     @Test
     public void converterSucesso() {
-        final LinhaIn linhaIn1 = new LinhaIn();
-        linhaIn1.setId(1l);
-        linhaIn1.setNome("linhaIn1");
-        linhaIn1.setCodigo("codigo1");
+        final LinhaIn linhaIn1 = createRandomLinhaIn();
 
-        final LinhaIn linhaIn2 = new LinhaIn();
-        linhaIn2.setId(2l);
-        linhaIn2.setNome("linhaIn2");
-        linhaIn2.setCodigo("codigo2");
+        final LinhaIn linhaIn2 = createRandomLinhaIn();
 
         final List<LinhaIn> linhasIn = new ArrayList<>();
         linhasIn.add(linhaIn1);
@@ -59,5 +55,14 @@ public class LinhasInToLinhasConverterTest {
     @Test(expected = IllegalArgumentException.class)
     public void converterErro() {
         converter.convert(new ArrayList<>());
+    }
+
+    private LinhaIn createRandomLinhaIn() {
+        final LinhaIn linhaIn = new LinhaIn();
+        linhaIn.setId(new Random().nextInt());
+        linhaIn.setCodigo(RandomString.make());
+        linhaIn.setNome(RandomString.make());
+
+        return linhaIn;
     }
 }
