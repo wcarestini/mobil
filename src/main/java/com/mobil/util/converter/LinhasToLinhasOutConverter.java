@@ -18,11 +18,6 @@ public class LinhasToLinhasOutConverter implements Converter<List<Linha>, List<L
 
     @Override
     public List<LinhaOut> convert(final List<Linha> linhas) {
-
-        if (linhas.isEmpty()) {
-            throw new IllegalArgumentException("A lista de LinhaIn não pode ser convertidade em uma lista de Linha.");
-        }
-
         return linhas.stream().map(linha -> modelMapper.map(linha, LinhaOut.class)).collect(Collectors.toList());
     }
 }
