@@ -5,14 +5,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -29,7 +26,6 @@ import java.util.List;
 public class Itinerario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id_itinerario")
     private Long id;
 
@@ -42,9 +38,9 @@ public class Itinerario {
 
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
-            name = "itinerario_parada",
+            name = "itinerario_coordenada",
             joinColumns = @JoinColumn(name = "id_itinerario"),
-            inverseJoinColumns = @JoinColumn(name = "id_parada")
+            inverseJoinColumns = @JoinColumn(name = "id_coordenada")
     )
-    private List<Parada> paradas;
+    private List<Coordenada> coordenadas;
 }

@@ -19,20 +19,20 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-@Entity(name = "Paradas")
-public class Parada {
+@Entity(name = "Coordenadas")
+public class Coordenada {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_parada")
+    @Column(name = "id_coordenada")
     private Long id;
 
     @Column(columnDefinition = "decimal")
-    private Double latitute;
+    private Double latitude;
 
     @Column(columnDefinition = "decimal")
     private Double longitude;
 
-    @ManyToMany(mappedBy = "paradas")
+    @ManyToMany(mappedBy = "coordenadas")
     private List<Itinerario> itinerarios;
 }

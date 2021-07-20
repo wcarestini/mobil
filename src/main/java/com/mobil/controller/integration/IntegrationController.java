@@ -1,6 +1,6 @@
 package com.mobil.controller.integration;
 
-import com.mobil.integration.service.CopiaBaseDadosLinhasService;
+import com.mobil.integration.service.linha.CopiaBaseDadosLinhasService;
 import com.mobil.model.out.LinhaOut;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

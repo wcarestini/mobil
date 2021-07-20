@@ -1,6 +1,7 @@
 package com.mobil.integration.service;
 
 import com.mobil.integration.model.in.LinhaIn;
+import com.mobil.integration.service.linha.BuscaLinhasService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.mobil.integration.util.enums.MensagemErro.ERRO_INESPERADO;
+import static com.mobil.util.enums.MensagemErro.ERRO_INESPERADO;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
