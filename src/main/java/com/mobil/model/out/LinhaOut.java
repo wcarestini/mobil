@@ -10,7 +10,5 @@ public class LinhaOut {
     private String codigo;
 
     private String nome;
-
-//    private List<Itinerario> itinerarios; TODO: Criar ItinararioOut e alterar aqui.
 }
 

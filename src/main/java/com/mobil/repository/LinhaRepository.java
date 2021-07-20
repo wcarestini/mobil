@@ -13,4 +13,6 @@ public interface LinhaRepository extends JpaRepository<Linha, Long> {
     boolean existsByCodigo(final String codigo);
 
     Optional<Linha> findByCodigo(final String codigo);
+
+    List<Linha> findAllByNomeContainsIgnoreCase(final String nome);
 }
