@@ -1,4 +1,4 @@
-package com.mobil.integration.service;
+package com.mobil.integration.service.linha;
 
 import com.mobil.integration.model.in.LinhaIn;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static com.mobil.integration.util.enums.MensagemErro.ERRO_INESPERADO;
+import static com.mobil.util.enums.MensagemErro.ERRO_INESPERADO;
 
 @RequiredArgsConstructor
 @Service

@@ -1,6 +1,5 @@
 package com.mobil.model.out;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 

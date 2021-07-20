@@ -1,8 +1,9 @@
-package com.mobil.integration.service;
+package com.mobil.integration.service.linha;
 
 import com.mobil.integration.model.in.LinhaIn;
 import com.mobil.model.entity.Linha;
 import com.mobil.model.out.LinhaOut;
+import com.mobil.service.linha.SalvaLinhasInService;
 import com.mobil.util.converter.LinhasToLinhasOutConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

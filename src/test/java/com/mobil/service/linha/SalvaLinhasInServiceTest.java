@@ -1,9 +1,10 @@
-package com.mobil.integration.service;
+package com.mobil.service.linha;
 
 import com.mobil.integration.model.in.LinhaIn;
 import com.mobil.integration.util.converter.LinhasInToLinhasConverter;
 import com.mobil.model.entity.Linha;
 import com.mobil.repository.LinhaRepository;
+import com.mobil.service.linha.SalvaLinhasInService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

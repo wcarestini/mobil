@@ -1,4 +1,4 @@
-package com.mobil.integration.service;
+package com.mobil.service.linha;
 
 import com.mobil.integration.model.in.LinhaIn;
 import com.mobil.integration.util.converter.LinhasInToLinhasConverter;
