@@ -52,11 +52,6 @@ public class LinhasInToLinhasConverterTest {
         assertEquals(linhasIn.size(), linhasRetornado.size());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void converterErro() {
-        converter.convert(new ArrayList<>());
-    }
-
     private LinhaIn createRandomLinhaIn() {
         final LinhaIn linhaIn = new LinhaIn();
         linhaIn.setId(new Random().nextInt());

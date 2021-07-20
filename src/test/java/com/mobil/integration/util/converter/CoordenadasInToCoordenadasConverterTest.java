@@ -56,11 +56,6 @@ public class CoordenadasInToCoordenadasConverterTest {
         assertEquals(coordenadasIn.size(), coordenadasRetornada.size());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void parametroEmpty() {
-        converter.convert(new ArrayList<>());
-    }
-
     private CoordenadaIn getRandomCoordenadaIn() {
         final CoordenadaIn coordenadaIn = new CoordenadaIn();
         coordenadaIn.setLongitude(RandomUtils.nextDouble());

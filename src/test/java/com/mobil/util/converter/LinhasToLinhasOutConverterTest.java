@@ -54,9 +54,4 @@ public class LinhasToLinhasOutConverterTest {
         assertNotNull(linhasOutRetornado);
         assertEquals(linhas.size(), linhasOutRetornado.size());
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void converterErro() {
-        converter.convert(new ArrayList<>());
-    }
 }
