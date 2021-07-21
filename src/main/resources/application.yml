@@ -1,0 +1,20 @@
+
+# DATASOURCE
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_SERVER}/${DB_USERNAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+# JPA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+integration:
+  lista-linhas:
+    url: "http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o"
+  busca-itinerario:
+    url: "http://www.poatransporte.com.br/php/facades/process.php?a=il&p="
